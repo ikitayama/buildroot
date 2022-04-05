@@ -50,7 +50,7 @@ cat <<-_EOF_ > "${START_QEMU_SCRIPT}"
 	if [ "\${1}" = "serial-only" ]; then
 	    EXTRA_ARGS='${SERIAL_ARGS}'
 	else
-	    EXTRA_ARGS='${DEFAULT_ARGS}'
+	    EXTRA_ARGS='${DEFAULT_ARGS}-net user,hostfwd=tcp::10023-:22 -net nic'
 	fi
 
 	export PATH="${HOST_DIR}/bin:\${PATH}"
