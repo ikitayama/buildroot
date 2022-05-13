@@ -127,7 +127,7 @@ ifeq ($(BR2_PACKAGE_LIBPNG),y)
 QEMU_OPTS += --enable-vnc-png
 QEMU_DEPENDENCIES += libpng
 else
-QEMU_OPTS += --disable-vnc-png
+#QEMU_OPTS += --disable-vnc-png
 endif
 ifeq ($(BR2_PACKAGE_JPEG),y)
 QEMU_OPTS += --enable-vnc-jpeg
